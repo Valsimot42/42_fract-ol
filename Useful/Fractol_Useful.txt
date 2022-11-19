@@ -1,0 +1,12 @@
+
+
+
+
+
+
+Q: Should struct definitions go in .h or .c file?
+
+A: If the struct is to be used by other compilcation units (.c files), place it in the header file
+   so you can include that header file wherever it is needed.
+
+   If the struct is only used in one compilation unit (.c file), place it in that .c file.
