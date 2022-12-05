@@ -3,23 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   window.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 15:56:54 by stena-he          #+#    #+#             */
-/*   Updated: 2022/09/25 15:26:48 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/12/05 10:44:31 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
 // Close windows
+
+/* Initialization of mlx_destroy_window from mlx library,
+which as the name suggests, destroys the window. However, 
+to cleanly exit the program, we must not forget the exit() function. */
 int	close_win(t_fractol *f)
 {
-	mlx_destroy_window(f->mlx, f->win);
-	f->win = NULL;
+	mlx_destroy_window(f->mlx, f->mlx_win);
+	f->mlx_win = NULL;
 	exit(0);
 }
 
+/* Upon pressing the ESC buton on keyboard, whose keycode is 53,
+key_hooks function will call close_win function which will kill
+the window upon pressing ESC button. */
 int	key_hooks(int keycode, t_fractol *f)
 {
 	if (keycode == 53)
@@ -28,6 +35,10 @@ int	key_hooks(int keycode, t_fractol *f)
 }
 
 // Mouse Zooming
+
+/* With function move, we are able to precisely zoom in specified direction,
+depending on our result from the code below. Depending on the position of our
+mouse, we can either zoom in left, right, down or up. */
 static void	move(t_fractol *f, double distance, char direction)
 {
 	double	range_r;
@@ -57,6 +68,8 @@ static void	move(t_fractol *f, double distance, char direction)
 	}
 }
 
+/* With the following function zoom, we are able to assign new ranges
+to our previously existing range values. */
 static void	zoom(t_fractol *f, double zoom)
 {
 	double	range_r;
@@ -70,6 +83,9 @@ static void	zoom(t_fractol *f, double zoom)
 	f->max_i = f->min_i + zoom * range_i;
 }
 
+/* In our mouse_event function, we have two events that can happen,
+either we zoom in or out, and depending on the action taken, we will
+execute the relevant if statement. */
 int	mouse_event(int keycode, int x, int y, t_fractol *f)
 {
 	if (keycode == MOUSE_WHEEL_UP)
@@ -87,7 +103,7 @@ int	mouse_event(int keycode, int x, int y, t_fractol *f)
 			move(f, (double)y / HEIGHT, 'U');
 	}
 	else if (keycode == MOUSE_WHEEL_DOWN)
-		zoom(f, 2);
+		zoom(f, 1.5);
 	else
 		return (0);
 	if (!ft_strncmp(f->f_name, "mandelbrot", 11))

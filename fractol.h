@@ -6,31 +6,28 @@
 /*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 22:13:07 by stena-he          #+#    #+#             */
-/*   Updated: 2022/12/01 13:47:45 by tbolkova         ###   ########.fr       */
+/*   Updated: 2022/12/05 10:40:15 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-/* Parameters */
+/* Parameters for window size */
 # define MAX_ITERATIONS 255
 # define WIDTH 900
 # define HEIGHT 900
 
-/* Keys */
+/* Keys for hooks */
 # define EVENT_CLOSE_BTN 17
 # define MOUSE_WHEEL_UP 4
 # define MOUSE_WHEEL_DOWN 5
 
 /* Libraries */
-//Std libraries
 # include <stdlib.h>
 # include <math.h>
 # include <unistd.h>
 # include <stdio.h>
-
-//Custom libraries
 # include "libraries/mlx/mlx.h"
 # include "libraries/Ft_printf/Libft/libft.h"
 # include "libraries/Ft_printf/ft_printf.h"
@@ -40,7 +37,7 @@
 typedef struct s_fractol
 {
 	void			*mlx;
-	void			*win;
+	void			*mlx_win;
 	char			*f_name;
 	double			min_r;
 	double			max_r;

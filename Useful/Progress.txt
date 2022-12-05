@@ -1,8 +1,0 @@
-
-
-
-I need to make a coordinate system.
-
-Set the boundaries so it does not overflow
-
-Once that is set, play around with mandlebrot set

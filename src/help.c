@@ -6,12 +6,13 @@
 /*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 22:44:22 by stena-he          #+#    #+#             */
-/*   Updated: 2022/12/01 13:47:56 by tbolkova         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:06:29 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
+/* Nothing fancy here, just a bunch of ft_printf functions. */
 void	print_help(void)
 {
 	ft_printf("/* Manual */\n\n");

@@ -6,7 +6,7 @@
 /*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 13:54:46 by stena-he          #+#    #+#             */
-/*   Updated: 2022/12/01 13:50:33 by tbolkova         ###   ########.fr       */
+/*   Updated: 2022/12/05 11:16:24 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	atod_loop(char *arr, int afterdot, float scale, float *val)
 	{
 		if (!ft_isdigit(*arr) && !(*arr == '.'))
 		{
-			ft_printf("Wait. That's illegal.\n\n");
+			ft_printf("You done fucked up.\n\n");
 			print_help();
 			exit(0);
 		}
