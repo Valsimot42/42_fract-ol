@@ -57,3 +57,5 @@ If the subject requires it, you must submit a Makefile which will compile your s
 <h3><b>¤ Part 2: Example ¤</b></h3>
 
 <p align="center"><img src=https://i.stack.imgur.com/O9kEL.gif" width="1000" height="800" />
+
+Depicted above is the Mandelbrot fractol. 
