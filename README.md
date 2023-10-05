@@ -11,10 +11,9 @@
 ---
 <h3><b>¤ How to use ¤</b></h3>
 
-*fill
-*fill
-*fill
-*fill
+* Clone the git repository.
+* Execute `make` in terminal.
+* Execute `./fractol` in terminal and read the manual for possible uses of the program.
 
 ---
 <h3><b>¤ Introduction ¤</b></h3>
