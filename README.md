@@ -8,6 +8,7 @@
 2) <b>Introduction</b>
 3) <b>Instructions</b>
 4) <b>Part 1: Parameters</b>
+5) <b>Part 2: Example</b>
 
 ---
 <h3><b>¤ How to use ¤</b></h3>
@@ -53,3 +54,6 @@ If the subject requires it, you must submit a Makefile which will compile your s
 * Pressing ESC must close the window and quit the program in a clean way, as well as clicing "X" on window's frame.
 
 ---
+<h3><b>¤ Part 2: Example ¤</b></h3>
+
+<p align="center"><img src=https://i.stack.imgur.com/O9kEL.gif" width="150" height="150" />
